@@ -140,6 +140,7 @@ class CAR(StrEnum):
   KIA_SPORTAGE_5TH_GEN = "KIA SPORTAGE 5TH GEN"
   KIA_SORENTO = "KIA SORENTO GT LINE 2018"
   KIA_SORENTO_4TH_GEN = "KIA SORENTO 4TH GEN"
+  KIA_SORENTO_4TH_GEN_NON_SCC = "KIA SORENTO 4TH GEN NON-SCC"
   KIA_SORENTO_HEV_4TH_GEN = "KIA SORENTO HYBRID 4TH GEN"
   KIA_STINGER = "KIA STINGER GT2 2018"
   KIA_STINGER_2022 = "KIA STINGER 2022"
@@ -331,6 +332,7 @@ CAR_INFO: dict[str, HyundaiCarInfo | list[HyundaiCarInfo] | None] = {
   CAR.KIA_FORTE_2019_NON_SCC: HyundaiCarInfo("Kia Forte Non-SCC 2019", "No Smart Cruise Control (SCC)", car_parts=CarParts.common([CarHarness.hyundai_g])),
   CAR.KIA_FORTE_2021_NON_SCC: HyundaiCarInfo("Kia Forte Non-SCC 2021", "No Smart Cruise Control (SCC)", car_parts=CarParts.common([CarHarness.hyundai_g])),
   CAR.KIA_SELTOS_2023_NON_SCC: HyundaiCarInfo("Kia Seltos Non-SCC 2023-24", "No Smart Cruise Control (SCC)", car_parts=CarParts.common([CarHarness.hyundai_l])),
+  CAR.KIA_SORENTO_4TH_GEN_NON_SCC: HyundaiCarInfo("Kia Sorento Non-SCC 2021-2023", "No Smart Cruise Control (SCC)", car_parts=CarParts.common([CarHarness.hyundai_k])),
   CAR.GENESIS_G70_2021_NON_SCC: HyundaiCarInfo("Genesis G70 Non-SCC 2021", "No Smart Cruise Control (SCC)", car_parts=CarParts.common([CarHarness.hyundai_f])),
 }
 
@@ -550,7 +552,7 @@ CHECKSUM = {
   "crc8": [CAR.SANTA_FE, CAR.SONATA, CAR.PALISADE, CAR.KIA_SELTOS, CAR.ELANTRA_2021, CAR.ELANTRA_HEV_2021,
            CAR.SONATA_HYBRID, CAR.SANTA_FE_2022, CAR.KIA_K5_2021, CAR.SANTA_FE_HEV_2022, CAR.SANTA_FE_PHEV_2022,
            CAR.KIA_K5_HEV_2020, CAR.CUSTIN_1ST_GEN, CAR.ELANTRA_2022_NON_SCC, CAR.GENESIS_G70_2021_NON_SCC,
-           CAR.KIA_SELTOS_2023_NON_SCC, CAR.BAYON_1ST_GEN_NON_SCC],
+           CAR.KIA_SELTOS_2023_NON_SCC, CAR.KIA_SORENTO_4TH_GEN_NON_SCC, CAR.BAYON_1ST_GEN_NON_SCC],
   "6B": [CAR.KIA_SORENTO, CAR.HYUNDAI_GENESIS],
 }
 
@@ -593,7 +595,7 @@ UNSUPPORTED_LONGITUDINAL_CAR = LEGACY_SAFETY_MODE_CAR | {CAR.KIA_NIRO_PHEV, CAR.
                                                          CAR.KIA_OPTIMA_H_G4_FL}
 
 NON_SCC_CAR = {CAR.KIA_FORTE_2021_NON_SCC, CAR.ELANTRA_2022_NON_SCC, CAR.KIA_FORTE_2019_NON_SCC, CAR.GENESIS_G70_2021_NON_SCC,
-               CAR.KIA_SELTOS_2023_NON_SCC, CAR.KONA_NON_SCC, CAR.BAYON_1ST_GEN_NON_SCC}
+               CAR.KIA_SELTOS_2023_NON_SCC, CAR.KIA_SORENTO_4TH_GEN_NON_SCC, CAR.KONA_NON_SCC, CAR.BAYON_1ST_GEN_NON_SCC}
 NON_SCC_NO_FCA_CAR = {CAR.KIA_FORTE_2019_NON_SCC, }
 NON_SCC_RADAR_FCA_CAR = {CAR.GENESIS_G70_2021_NON_SCC, }
 
@@ -662,6 +664,7 @@ DBC = {
   CAR.GENESIS_GV70_1ST_GEN: dbc_dict('hyundai_canfd', None),
   CAR.GENESIS_GV60_EV_1ST_GEN: dbc_dict('hyundai_canfd', None),
   CAR.KIA_SORENTO_4TH_GEN: dbc_dict('hyundai_canfd', None),
+  CAR.KIA_SORENTO_4TH_GEN_NON_SCC: dbc_dict('hyundai_canfd', None),
   CAR.KIA_NIRO_HEV_2ND_GEN: dbc_dict('hyundai_canfd', None),
   CAR.KIA_NIRO_EV_2ND_GEN: dbc_dict('hyundai_canfd', None),
   CAR.GENESIS_GV80: dbc_dict('hyundai_canfd', None),

@@ -1647,6 +1647,40 @@ FW_VERSIONS = {
       b'\xf1\x00MQ4_ SCC FHCUP      1.00 1.08 99110-P2000         ',
     ],
   },
+  CAR.KIA_SORENTO_4TH_GEN_NON_SCC: {
+    (Ecu.abs, 0x7d1, None): [
+      b'\xf1\x00MQ4 ESC \x03 101!\x03\x03 58910-R5100',
+      b'\xf1\x8b "\x030',
+    ],
+    (Ecu.combinationMeter, 0x7c6, None): [
+      b'\xf1\x00031',
+      b'\xf1\x8b "\x01\x12',
+    ],
+    (Ecu.cornerRadar, 0x7b7, None): [
+      b'\xf1\x00MQ4 BCW RR 1.00 , 1.01 (v\x94S!\x03A\x16\x13',
+      b'\xf1\x8b !\x12\x07 !\x12\x07',
+    ],
+    (Ecu.engine, 0x7e0, None): [
+      b'MADWN5GMGXXXXL5B',
+      b'\xf1\x8739120-2SMN5\xf1\x82MADWN5GMGXXXXL5B',
+    ],
+    (Ecu.eps, 0x7d4, None): [
+      b'\xf1\x00MQ4 MDPS C 1.00 1.05 56310R5030\x00 4MQDC105',
+      b'\xf1\x8b !\x12\x07 !\x12\x07',
+    ],
+    (Ecu.hvac, 0x7b3, None): [
+      b"\xf1\x00MQ4   97255-R5050CONTROL ASS'Y-DATC  1.04MQ4 DATC(-)1.0       ",
+    ],
+    (Ecu.fwdCamera, 0x7c4, None): [
+      b'\xf1\x00MQ4 MFC  AT USA LHD 1.00 1.06 99210-R5000 211216',
+      b'\xf1\x8b "\x030',
+    ],
+    (Ecu.transmission, 0x7e1, None): [
+      b'TMQ4G25X4XSC0NS3',
+      b'\xf1\x87SDNXBA2977294GL1wwww\x88\x88\x98\x89x\x88\x87\x88\x88wx\x87ffff\x87?\xfb\xff\x88\x88\x9f\xff1.'
+      b'\xf1\x89HT6WADF0A1\xf1\x82TMQ4G25X4XSC0NS3',
+    ],
+  },
   CAR.KIA_SORENTO_HEV_4TH_GEN: {
     (Ecu.fwdCamera, 0x7c4, None): [
       b'\xf1\x00MQ4HMFC  AT KOR LHD 1.00 1.04 99210-P2000 200330',

@@ -245,6 +245,10 @@ class CarInterface(CarInterfaceBase):
         ret.mass = 3957 * CV.LB_TO_KG
       else:
         ret.mass = 4396 * CV.LB_TO_KG
+    elif candidate == CAR.KIA_SORENTO_4TH_GEN_NON_SCC:
+      ret.wheelbase = 2.81
+      ret.steerRatio = 13.5  # average of the platforms
+      ret.mass = 3957 * CV.LB_TO_KG
     elif candidate == CAR.KIA_CARNIVAL_4TH_GEN:
       ret.mass = 2087.
       ret.wheelbase = 3.09

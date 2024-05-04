@@ -238,10 +238,10 @@ class CarInterface(CarInterfaceBase):
       ret.wheelbase = 2.9
       ret.steerRatio = 16.
       ret.tireStiffnessFactor = 0.65
-    elif candidate in (CAR.KIA_SORENTO_4TH_GEN, CAR.KIA_SORENTO_HEV_4TH_GEN):
+    elif candidate in (CAR.KIA_SORENTO_4TH_GEN, CAR.KIA_SORENTO_HEV_4TH_GEN, CAR.KIA_SORENTO_4TH_GEN_NON_SCC):
       ret.wheelbase = 2.81
       ret.steerRatio = 13.5  # average of the platforms
-      if candidate == CAR.KIA_SORENTO_4TH_GEN:
+      if candidate == CAR.KIA_SORENTO_4TH_GEN or if candidate == CAR.KIA_SORENTO_4TH_GEN_NON_SCC:
         ret.mass = 3957 * CV.LB_TO_KG
       else:
         ret.mass = 4396 * CV.LB_TO_KG
